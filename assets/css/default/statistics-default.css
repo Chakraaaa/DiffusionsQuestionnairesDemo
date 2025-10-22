@@ -1,0 +1,59 @@
+/*******************
+    RECHERCHE
+*******************/
+#form_recherches {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#form_recherches > form {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#liste_recherche th,
+#liste_recherche td{
+    vertical-align: middle;
+    text-align: center;
+}
+
+#liste_recherche th:nth-child(3),
+#liste_recherche td:nth-child(3),
+#liste_recherche th:nth-child(5),
+#liste_recherche td:nth-child(5)
+{
+    text-align: left;
+}
+#liste_recherche th:nth-child(6),
+#liste_recherche td:nth-child(6)
+{
+    text-align: right;
+}
+
+.ui-menu .ui-menu-item-wrapper a{
+    display: inline-block;
+}
+
+/*******************
+    EDITION
+*******************/
+#demande{
+    margin: 0 .25rem;
+}
+
+/*******************
+    PARAMETRES
+*******************/
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card-content {
+    flex-grow: 1;
+}
+.field-label .label {
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: left;
+}

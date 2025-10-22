@@ -1,0 +1,31 @@
+#liste_applications td {
+    vertical-align: middle;
+}
+
+#liste_applications th:nth-child(4),
+#liste_applications td:nth-child(4) {
+    text-align: center;
+}
+#liste_applications th:nth-child(6),
+#liste_applications td:nth-child(6) {
+    text-align: right;
+}
+
+/** Case à cocher Accès */
+input[type="checkbox"].acces {
+    display: none;
+}
+input[type="checkbox"].acces + label::before {
+    content:'';
+    background-color: #cc0f35;
+    border: 1px solid #122844;
+    padding: 0 0.7rem;
+    margin-right: 0.3rem;
+    cursor: pointer;
+}
+input[type="checkbox"].acces:checked + label::before {
+    background-color: #00947e;
+    content: "";
+}
+
+

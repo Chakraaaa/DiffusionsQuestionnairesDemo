@@ -1,0 +1,6 @@
+*/30 * * * * curl --request GET 'https://services.rs-pompes.com/Command.html/orders?secure-token=5dfd954fD84fsjf1dsfd54ZRH'
+*/15 * * * * curl --request GET 'https://services.rs-pompes.com/Command.html/products?secure-token=5dfd954fD84fsjf1dsfd54ZRH'
+*/10 * * * * curl --request GET 'https://services.rs-pompes.com/Command.html/price?secure-token=5dfd954fD84fsjf1dsfd54ZRH'
+*/60 * * * * curl --request GET 'https://services.rs-pompes.com/Command.html/price?secure-token=5dfd954fD84fsjf1dsfd54ZRH'
+
+0 4 * * * /backup/backup.sh

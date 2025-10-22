@@ -1,0 +1,28 @@
+<form id="edit-question-prcc-form" name="edit-question-prcc-form" method="POST" action="<?=$urlSavePopUpEditQuestionPRCC?>">
+    <input type="hidden" name="question_id" value="<?=$question->id?>">
+    <hr class="divider">
+    <div class="columns">
+        <div class="column is-one-third has-text-right">
+            <label class="label is-right">Enoncé de la question :</label>
+        </div>
+        <div class="column is-two-thirds">
+            <div class="field is-right">
+                <div class="control">
+                    <textarea id="respondent-text" class="textarea is-small" name="respondent_text" placeholder="Entrez l'énoncé de la question"><?= htmlspecialchars(strip_tags($question->label)) ?></textarea>
+                    <div style="font-size: 12px;margin-top: 5px">Attention les sauts de ligne ne sont pas pris en compte</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="field is-grouped has-text-right">
+        <div class="control">
+            <button type="button" id="button-fermer-pop-up-edit-question-PRCC" class="button-fermer">Fermer</button>
+        </div>
+        <div class="control">
+            <button type="submit" class="button-valider">Valider</button>
+        </div>
+    </div>
+</form>

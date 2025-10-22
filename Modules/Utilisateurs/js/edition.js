@@ -1,0 +1,1 @@
+import { dialog } from '../../../assets/js/widgets.js';

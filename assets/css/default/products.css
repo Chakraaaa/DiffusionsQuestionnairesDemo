@@ -1,0 +1,56 @@
+/*******************
+    RECHERCHE
+*******************/
+#form_recherches {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#form_recherches > form {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#liste_recherche th,
+#liste_recherche td{
+    vertical-align: middle;
+    text-align: left;
+}
+
+.ui-menu .ui-menu-item-wrapper a{
+    display: inline-block;
+}
+
+#liste_recherche.import th:nth-child(8),
+#liste_recherche.import th:nth-child(9),
+#liste_recherche.import th:nth-child(10),
+#liste_recherche.import th:nth-child(11),
+#liste_recherche.import th:nth-child(12),
+#liste_recherche.import th:nth-child(13),
+#liste_recherche.import th:nth-child(14)
+{
+    background-color: blueviolet;
+}
+
+/*******************
+    EDITION
+*******************/
+#demande{
+    margin: 0 .25rem;
+}
+#demande span:empty:after {
+    content: "Champs requis !";
+    color: brown;
+}
+
+.field-label .label {
+    min-width: 25vw;
+}
+
+/*******************
+    APERCU MACRO
+*******************/
+#to-copy{
+    height: 85vh !important;
+    font-size: 0.9em;
+}

@@ -1,0 +1,25 @@
+<form id="formCreateBarom" name="formCreateBarom" method="POST" action="<?=$urlCreate?>">
+    <input id="quizType" type="hidden" name="quizType" value="BAROM">
+    <hr class="divider">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-one-third has-text-right">
+                <label class="label is-right">Nom :</label>
+            </div>
+            <div class="column is-two-thirds">
+                <div class="field is-right">
+                    <div class="control">
+                        <input id="quizName" class="input is-small" type="text" name="quizName" value="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <p class="has-text-right mt-5">
+        <button type="button" id="ClosePopUpCreateBarom" class="button-fermer" name="ClosePopUpCreateBarom">Fermer</button>
+        <button type="submit" class="button-valider" name="btnValidCreateBarom">Valider</button>
+    </p>
+</form>

@@ -1,0 +1,38 @@
+.form_responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,  minmax(297px, 1fr));
+    grid-gap: 1rem;
+    align-items: strech;
+}
+
+.form_responsive .champ-textarea {
+    grid-row-end: span 2;
+    align-content: stretch;
+}
+
+.form_responsive .champ {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: flex-start;
+    grid-template-rows: min-content;
+    grid-gap: 8px;
+}
+
+@media only screen and (min-width: 1400px) {
+    .form_responsive {
+        grid-template-columns: repeat(3,  1fr);
+    }
+}
+
+@media only screen and (min-width: 947px) {
+    .form_responsive {
+        grid-template-columns: repeat(3,  1fr);
+    }
+    .form_responsive .champ-checkbox {
+        grid-column-end: span 2;
+        display: flex;
+    }
+    .form_responsive .champ-checkbox label {
+        margin-right: 2rem;
+    }
+}

@@ -1,0 +1,80 @@
+/*******************
+    RECHERCHE
+*******************/
+#form_recherches {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#form_recherches > form {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+#liste_recherche th,
+#liste_recherche td{
+    vertical-align: middle;
+    text-align: left;
+}
+#liste_recherche th.total {
+    width: 100px;
+}
+#liste_recherche th.marge {
+    width: 130px;
+}
+#liste_recherche tr.order-lign{
+    background-color: lightblue;
+}
+#liste_recherche td.order-colomn{
+    font-weight: 700;
+}
+#liste_recherche td .badge-price{
+    letter-spacing: 0.0625em;
+    border-radius: 10px;
+    background-color: #79bd3c;
+    vertical-align: baseline;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px
+}
+#liste_recherche td .label{
+    font-size: 12px;
+    font-weight: 400;
+    display: inline;
+    padding: .2em .6em .3em;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.ui-menu .ui-menu-item-wrapper a{
+    display: inline-block;
+}
+
+/*******************
+    EDITION
+*******************/
+#demande{
+    margin: 0 .25rem;
+}
+#demande span:empty:after {
+    content: "Champs requis !";
+    color: brown;
+}
+
+.field-label .label {
+    min-width: 25vw;
+}
+
+/*******************
+    APERCU MACRO
+*******************/
+#to-copy{
+    height: 85vh !important;
+    font-size: 0.9em;
+}

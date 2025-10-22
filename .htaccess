@@ -1,0 +1,41 @@
+<IfModule mod_headers.c>
+# seulement pour Apache > 2.2.4:
+#Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure
+
+# Empêche les attaques du type "clickjacking"
+Header always set X-FRAME-OPTIONS "SAMEORIGIN"
+
+# Empêche les attaques du type XSS
+Header always set X-XSS-Protection "1; mode=block"
+
+# Protège de l'exploitation malveillante du MIME Sniffing.
+Header always set X-Content-Type-Options "nosniff"
+
+# Limite l'exécution à des portions de code identifiées par le domaine auquel elles appartiennent
+#Header set Content-Security-Policy "script-src 'self' https://www.google.com"
+
+</IfModule>
+
+# Indique au serveur quels fichiers considérer comme des fichiers d'index
+DirectoryIndex public/index.php
+
+#Désactiver le listage de dossier sans index.php
+Options -Indexes
+
+#Paramètres des upload de fichiers
+php_value file_uploads 1
+php_value upload_max_filesize 16M
+php_value post_max_size 16M
+
+# Url_rewriting
+# http://altorouter.com/usage/rewrite-requests.html
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . public/index.php [L]
+
+#Mémoire
+php_value memory_limit 128M
+
+# https://httpd.apache.org/docs/current/fr/mod/mod_headers.html
+# Header set Cache-Control 'max-age=120, private' "expr=%{REQUEST_STATUS} == 200"
+# Header set Pragma cache "expr=%{REQUEST_STATUS} == 200"

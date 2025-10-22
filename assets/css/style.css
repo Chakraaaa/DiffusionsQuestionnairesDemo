@@ -1,0 +1,542 @@
+:root {
+    --main-header-color: #696252;
+}
+
+/** BASE */
+kbd {
+    margin: 0px 0.1em;
+    padding: 0.1em 0.6em;
+    border-radius: 3px;
+    border: 1px solid rgb(204, 204, 204);
+    color: rgb(51, 51, 51);
+    line-height: 1.4;
+    font-family: Work Sans,Arial,Helvetica,sans-serif;
+    font-size: 0.9rem;
+    display: inline-block;
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.2), inset 0px 0px 0px 2px #ffffff;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+/* work-sans-100 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 100;
+    src: url('https://questionnaire.relaismanagers.fr/assets/font/work-sans-v19-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-200 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('https://questionnaire.relaismanagers.fr/assets/font/work-sans-v19-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://questionnaire.relaismanagers.fr/assets/font/work-sans-v19-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://questionnaire.relaismanagers.fr/assets/font/work-sans-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('https://questionnaire.relaismanagers.fr/assets/font/work-sans-v19-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('https://questionnaire.relaismanagers.fr/assets/font/work-sans-v19-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://questionnaire.relaismanagers.fr/assets/font/work-sans-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('https://questionnaire.relaismanagers.fr/assets/font/work-sans-v19-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* work-sans-900 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: url('https://questionnaire.relaismanagers.fr/assets/font/work-sans-v19-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/** LAYOUT */
+html{
+    overflow: auto;
+}
+body{
+    overflow: hidden;
+}
+body > header, aside, .menu-label, .menu-list li a   {
+    color: #f8f8f2
+}
+body > header  {
+    background-color: var(--main-header-color);
+    height: 52px;
+    box-shadow: .1rem .2rem .5rem #ccc;
+}
+main {
+    margin: 0px;
+    padding: 0.75rem 0.75rem 0 0.75rem;
+    min-height: calc(100vh - 52px);
+    background-color: #E8EDF2;
+}
+#webeo {
+    background-color: #122844;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    font-family: Work Sans;
+}
+
+/** MODULE */
+.message-header,
+.card-header-title{
+    background-color: var(--main-header-color);
+    color: #fff !important;
+}
+
+.table_standard                   {
+    border-collapse: collapse;
+}
+.table_standard th:first-of-type  {
+    border-radius: .5rem 0px 0px 0px;
+}
+.table_standard th:last-of-type   {
+    border-radius: 0px .5rem 0px 0px;
+}
+.table_standard thead th          {
+    background-color: var(--main-header-color);
+    padding: 1%;
+    color: #fff;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.label-span {
+    padding: .3rem .2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.label-span label:first-letter {
+    text-transform: uppercase;
+}
+.label-span label:after {
+    content: " :";
+}
+.label-span span {
+    font-weight: bolder;
+    margin-left: .8rem;
+}
+
+/** PATCH JQUERY-UI */
+.ui-widget-header {
+    background: none !important;
+}
+
+.is-button-highlight {
+    background-color: #ffa200;
+    border-color: transparent;
+    color: rgba(0,0,0,.8);
+}
+.is-button-highlight:hover {
+    color: #000;
+    border-color: #b5b5b5;
+}
+
+.button-fermer {
+    background-color: white;
+    color: #696252;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 14px!important;
+}
+
+.button-fermer:hover {
+    background-color: #696252;
+    color: white;
+}
+
+.button-valider {
+    background-color: #E9660B;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 14px!important;
+    font-family: Work Sans;
+    font-weight: 400;
+}
+
+.button-valider:hover {
+    background-color: #696252;
+    color: white;
+}
+
+
+.divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.ButtonGroupe {
+    background-color: white;
+    color: #E9660B;
+    border: 1px solid #E9660B;
+    border-radius: 20px;
+    padding: 0.3em 0.8em;
+    cursor: pointer;
+    margin-top: 17px;
+    font-size: 12px!important;
+}
+
+.ButtonGroupe:hover{
+    background-color: #E9660B;
+    color: white;
+}
+
+.notification.is-success {
+    background-color: #48c774;
+}
+
+p {
+    color: #696252;
+}
+a {
+    color: #696252;
+}
+a:hover {
+    color: #696252;
+}
+.text-link:hover {
+    color: #696252;
+    font-weight: 500;
+ }
+table.table-rm {
+    border-collapse: separate!important;
+    -webkit-border-horizontal-spacing: 0px!important;
+    -webkit-border-vertical-spacing: 10px!important;
+    background-color: #E8EDF2!important;
+    font-weight: 400;
+}
+table.table-rm thead th {
+    border: none!important;
+}
+.table-rm tbody tr {
+    background-color: white!important;
+}
+.table-rm tbody tr:hover {
+    background-color: #ECECEC!important;
+}
+.table-rm td {
+    padding: 2px!important;
+}
+.table-rm tr td {
+    border-style: solid none solid none!important;
+    border-top: solid 1px #CAD1D7!important;
+    border-bottom: solid 1px #CAD1D7!important;
+    border-left-width : 0px!important;
+    border-right-width : 0px!important;
+}
+.table-rm tr td:first-child {
+    border-top-left-radius: 10px!important;
+    border-top-width : 1px!important;
+    border-top-color : #CAD1D7!important;
+    border-bottom-left-radius: 10px!important;
+    border-bottom-width : 1px!important;
+    border-bottom-color : #CAD1D7!important;
+    border-left-width : 1px!important;
+    border-left-color : #CAD1D7!important;
+    border-style: solid none solid solid!important;
+    padding-left: 15px!important;
+}
+.table-rm tr td:last-child {
+    border-top-right-radius: 10px!important;
+    border-top-width : 1px!important;
+    border-top-color : #CAD1D7!important;
+    border-bottom-right-radius: 10px!important;
+    border-bottom-width : 1px!important;
+    border-bottom-color : #CAD1D7!important;
+    border-right-width : 1px!important;
+    border-right-color : #CAD1D7!important;
+    border-style: solid solid solid none!important;
+    padding-right: 15px!important;
+    text-align: right;
+}
+.table-rm .icon {
+    font-size: 12px!important;
+}
+.table-rm .icon:hover {
+    transform:scale(1.3)!important;
+    background-color: unset!important;
+    color: #696252!important;
+}
+
+.logo-response{
+    width: 100%;
+    height: 100%;
+    max-width: 200px
+}
+
+#submitQuizButton {
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+.button-reset-custom {
+    background-color: #e9660b;
+    border: none;
+    box-shadow: none;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    height: auto;
+    line-height: normal;
+}
+
+.button-reset-custom:hover {
+    background-color: #d85e0a;
+    box-shadow: none;
+}
+
+.button-reset-custom .icon i {
+    color: white;
+}
+
+.button-reset-custom .icon:hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.icon-white {
+    color: white;
+}
+
+#delete-selected {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70vw;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+.field.is-horizontal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.field.is-horizontal .label {
+    display: inline-flex;
+    margin-right: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.control input.input {
+    max-width: 500px;
+}
+
+.field.has-text-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#respondant-field, #sexe-container, #fonction-personne {
+    display: none;
+}
+
+.side-menu {
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.buttons-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buttons-container a:hover {
+    background-color: #f0f0f0;
+}
+
+.button-with-icon .icon {
+    margin-right: 10px;
+}
+
+.button-text {
+    font-size: 16px;
+}
+
+.divider {
+    border-top: 2px solid #ddd;
+    margin: 15px 0;
+    position: relative;
+}
+
+.divider::before {
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: #999;
+}
+
+
+.input_titre{
+    width: 100%;
+}
+
+.input_color{
+    width: 100%;
+}
+
+.input_date{
+    width: 100%;
+}
+.select-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.select-container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding-right: 30px;
+}
+
+.select-container::after {
+    content: "▼";
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.btn-details {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.btn-details:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+.textes-options{
+    font-size: 16px;
+    color: #4a4a4a;
+    font-weight: bold;
+}
+
+.icon-edit-questions {
+    cursor: pointer;
+    color: #696252;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 5px;
+    transition: color 0.3s, transform 0.3s, background-color 0.3s;
+}
+
+.icon-edit-questions:hover {
+    color: #4f4b3f;
+    background-color: #e8edf2;
+    transform: scale(1.1);
+}
+
+ ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

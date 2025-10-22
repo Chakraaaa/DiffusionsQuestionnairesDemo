@@ -1,0 +1,58 @@
+/* Case à cocher OUI ou NON */
+.input_oui_non {
+    width: 4.5rem;
+    height: 1.5rem;
+    background: #122844;
+    margin: 0px auto;
+    padding: 0px;
+    border-radius: .75rem;
+    position: relative;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,0.2);
+}
+.input_oui_non:after {
+    content: 'Non';
+    font: 12px/26px Arial, sans-serif;
+    color: burlywood;
+    position: absolute;
+    top: -.1rem;
+    right: .45rem;
+    z-index: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(255,255,255,.15);
+}
+.input_oui_non:before {
+    content: 'Oui';
+    font: 12px/26px Arial, sans-serif;
+    color: #ADFF2F;
+    position: absolute;
+    top: -.1rem;
+    left: .5rem;
+    z-index: 0;
+    font-weight: bold;
+}
+.input_oui_non label:after {
+    content: "" !important;
+}
+.input_oui_non input[type=checkbox] {
+    visibility: hidden;
+}
+.input_oui_non label {
+    display: block;
+    width: 2.1rem;
+    height: 1.2rem;
+
+    border-radius: .75rem;
+
+    transition: all .4s ease;
+    cursor: pointer;
+    position: absolute;
+    top: .14rem;
+    left: .15em;
+    z-index: 1;
+
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+    background: #fcfff4;
+}
+.input_oui_non input[type=checkbox]:checked + label {
+    left: 2.25rem;
+}

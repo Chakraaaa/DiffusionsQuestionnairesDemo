@@ -1,0 +1,13 @@
+/** Case à cocher PLEINE */
+input[type="checkbox"].pleine {
+    display: none;
+}
+input[type="checkbox"].pleine + label::before {
+    content:'';
+    border: 1px solid #122844;
+    padding: 0 0.6rem;
+    margin-right: 0.3rem;
+}
+input[type="checkbox"].pleine:checked + label::before {
+    background-color: #00947e;
+}

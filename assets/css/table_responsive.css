@@ -1,0 +1,48 @@
+@media only screen and (max-width: 1023px) {
+
+    .table_responsive table,
+    .table_responsive thead,
+    .table_responsive tbody,
+    .table_responsive tr,
+    .table_responsive th,
+    .table_responsive td {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .table_responsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .table_responsive tbody tr {
+        margin-bottom: 1rem;
+    }
+
+    .table_responsive tbody td::before {
+        padding: 0rem 0.5rem;
+        content: attr(data-label);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35vw;
+        bottom: 0;
+        background-color: #122844;
+        color: #fff;
+        text-shadow: #000 2px 2px 2px;
+        display: flex;
+
+        align-items: center;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+    .table_responsive tbody td         {
+        padding: 0.5rem 1rem 0.5rem 41vw !important;
+        position: relative;
+        background: #FFF;
+        text-align: left !important;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        min-height: 6vh;
+    }
+}
